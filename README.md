@@ -1,6 +1,6 @@
 # How to run
 ## Setting up
-1. create a folder in HPC:
+1. create a folder in HPC and cd to it:
 ```
 mkdir /scratch/<net_id>/hart_inference>
 ```
