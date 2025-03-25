@@ -4,12 +4,12 @@
 ```
 mkdir /scratch/<net_id>/hart_inference>
 ```
-3. create venv:
+2. create venv:
 ```
 conda env create -f environment.yml -n <venv_name>
 ```
 >note: i got many issues while installing libs, let me know if you run into any errors.
-5. activate the env:
+3. activate the env:
 ```
 conda activate <venv_name>
 ```
@@ -19,14 +19,14 @@ conda activate <venv_name>
 ```
 srun --mem=8G --account=pr_169_general --gres=gpu:v100:1 --cpus-per-task=8 --time=02:00:00 --pty bash -i
 ```
-6. run inference:
+5. run inference:
 ```
 python hart/sample.py --prompt <your_prompt>
 ```
-8. result will be saved in a folder named `samples/`
+6. result will be saved in a folder named `samples/`
 
 
-9. to view the image, go to your pc's terminal and run
+7. to view the image, go to your pc's terminal and run
 ```
 scp <net_id>@greene.hpc.nyu.edu:<path_to_image> <destination>
 ```
